@@ -609,7 +609,7 @@ See [https://www.ffiec.gov/pdf/FFIEC_forms/CodificationReferences_201006.pdf](ht
 | | Entrepreneurship | 3 | | |
 | | Business Communications | 3 | | |
 | | Economic Analysis for Business | 3 | | |
-| | Capstone Business Strategy  3 | | |
+| | Capstone Business Strategy | 3 | | |
 | | TOTAL | 24 | | |
 ## Internal Audit
 

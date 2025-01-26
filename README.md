@@ -589,14 +589,28 @@ See [https://www.ffiec.gov/pdf/FFIEC_forms/CodificationReferences_201006.pdf](ht
 |                    | Principles of Marketing              |    3    |  9.29 | https://www.thriftbooks.com/w/principles-of-marketing_philip-kotler_gary-armstrong/257758/?resultid=a079b2b3-a7b4-463f-89d0-ffcc88eb88fa#edition=6425732&idiq=4260000 |
 |                    | Operations Management                |    3    |  24.24 | https://www.thriftbooks.com/w/operations-management-for-dummies_edward-anderson_geoffrey-parker/20700558/?resultid=55a8b520-c08a-4f67-a5d0-26a4d011bf0c#edition=59416998&idiq=46022255 |
 |                    | Strategic Management Business Policy |    3    |  9.99 | https://www.thriftbooks.com/w/strategic-management-and-business-policy-10th-edition_thomas-l-wheelen_j-david-hunger/271620/?resultid=1f561ed9-cd35-45d0-817b-31e200496efe#edition=8429609&idiq=6625699 |
-|                    | TOTAL                                |   18   | 431.55 |                                                                                                                                                                  |
-| Major Requirements |                                      |        |      |                                                                                                                                                                  |
-|                    |                                      |        |      |                                                                                                                                                                  |
-|                    |                                      |        |      |                                                                                                                                                                  |
-|                    |                                      |        |      |                                                                                                                                                                  |
-|                    |                                      |        |      |                                                                                                                                                                  |
-|                    |                                      |        |      |                                                                                                                                                                  |
-
+|                    | TOTAL                                |   18   | 431.55 |  |
+| Major Requirements |   |        |      |      |
+| Upper-Division Accounting Courses | |        |      |      |
+| | Intermediate Accounting I | 3 | | |
+| | Intermediate Accounting II | 3 | | |
+| | Advanced Accounting | 3 | | |
+| | Auditing | 3 | | |
+| | Cost Accounting | 3 | | |
+| | Financial Accounting (based on USA standards) | 3 | | |
+| | Taxation (based on USA standards) | 3 | | |
+| | Accounting Information Systems | 3 | | |
+| | TOTAL | 24 | | |
+| Upper-Division General Business Courses | |        |      |      |
+| | Business Law (based on USA Law) | 3 | | |
+| | Business Ethics | 3 | | |
+| | Organizational Behavior | 3 | | |
+| | International Business | 3 | | |
+| | Entrepreneurship | 3 | | |
+| | Business Communications | 3 | | |
+| | Economic Analysis for Business | 3 | | |
+| | Capstone Business Strategy  3 | | |
+| | TOTAL | 24 | | |
 ## Internal Audit
 
 Three types of internal audit,

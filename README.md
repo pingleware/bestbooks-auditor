@@ -611,6 +611,106 @@ See [https://www.ffiec.gov/pdf/FFIEC_forms/CodificationReferences_201006.pdf](ht
 | | Economic Analysis for Business | 3 | | |
 | | Capstone Business Strategy | 3 | | |
 | | TOTAL | 24 | | |
+
+TOTAL 87 credits equals 1,305 classroom hours for semester system or 870 classroom hours for quarter system.
+
+To convert credit hours to class hours, you can use the following general guidelines:
+
+    1 credit hour = 15 contact hours (for a semester system)
+    1 credit hour = 10 contact hours (for a quarter system)
+
+Here’s a general breakdown of the **Semester** and **Quarter** system calendars for classes:  
+
+---
+
+### **Semester System (Typical 15-16 weeks)**
+- **Fall Semester** (Mid-August to Mid-December)  
+- **Spring Semester** (Mid-January to Early-May)  
+- **Optional Summer Session** (May to August, 6-12 weeks)
+
+| **Term**      | **Start Date** | **End Date** | **Weeks** |
+|--------------|-------------|-----------|---------|
+| Fall Semester | Mid-August  | Mid-December  | 15-16 |
+| Spring Semester | Mid-January  | Early-May  | 15-16 |
+| Summer Session | May | August | 6-12 |
+
+---
+
+### **Quarter System (Typical 10-11 weeks)**
+- **Fall Quarter** (Late September to Early December)  
+- **Winter Quarter** (Early January to Mid-March)  
+- **Spring Quarter** (Late March to Early June)  
+- **Optional Summer Quarter** (June to August, 8-10 weeks)
+
+| **Term**      | **Start Date** | **End Date** | **Weeks** |
+|--------------|-------------|-----------|---------|
+| Fall Quarter | Late September | Early December | 10-11 |
+| Winter Quarter | Early January | Mid-March | 10-11 |
+| Spring Quarter | Late March | Early June | 10-11 |
+| Summer Quarter | June | August | 8-10 |
+
+Here is the **Semester and Quarter Calendar** for the **2025-2026** academic year:  
+
+---
+
+### **Semester System (2025-2026)**
+| **Term**      | **Start Date** | **End Date** | **Weeks** |
+|--------------|-------------|-----------|---------|
+| Fall 2025 | Monday, August 18, 2025 | Friday, December 12, 2025 | 16 |
+| Spring 2026 | Monday, January 13, 2026 | Friday, May 8, 2026 | 16 |
+| Summer 2026 | Monday, May 19, 2026 | Friday, August 8, 2026 | 6-12 |
+
+---
+
+### **Quarter System (2025-2026)**
+| **Term**      | **Start Date** | **End Date** | **Weeks** |
+|--------------|-------------|-----------|---------|
+| Fall 2025 | Monday, September 22, 2025 | Friday, December 5, 2025 | 10 |
+| Winter 2026 | Monday, January 6, 2026 | Friday, March 13, 2026 | 10 |
+| Spring 2026 | Monday, March 30, 2026 | Friday, June 12, 2026 | 10 |
+| Summer 2026 | Monday, June 22, 2026 | Friday, August 28, 2026 | 8-10 |
+
+### Preparing for the CPA Exam
+Preparing for the CPA exam requires a strategic and disciplined approach. Here are key techniques to maximize your score:
+
+### **1. Thought Process & Critical Thinking**
+- **Understand Concepts Deeply** – Avoid rote memorization; focus on understanding why a rule or principle exists.
+- **Practice Application** – Work on practice questions to develop the ability to apply concepts in different scenarios.
+- **Use the “Why?” Method** – Continuously ask why something is correct or incorrect to reinforce deeper learning.
+- **Simulate Exam Conditions** – Practice with time constraints to enhance problem-solving speed and efficiency.
+
+### **2. Effective Note-Taking**
+- **Summarization** – Write down key takeaways in your own words to reinforce understanding.
+- **Visual Aids** – Use mind maps, charts, and tables to organize complex topics.
+- **Mnemonics & Acronyms** – Develop memory aids (e.g., **P**rovide for liabilities, **E**stimate the cost, **R**ecord the transaction).
+- **Flashcards** – Create digital or physical flashcards for quick review of essential terms and formulas.
+
+### **3. Analytical Approach**
+- **Break Down Problems** – Identify relevant details and eliminate unnecessary information.
+- **Compare Answer Choices** – When unsure, compare options logically rather than guessing blindly.
+- **Use Process of Elimination** – Identify incorrect answers quickly to narrow down choices.
+- **Prioritize High-Scoring Areas** – Focus on topics with greater weight in the exam blueprint.
+
+### **4. Organization & Time Management**
+- **Create a Study Schedule** – Allocate time for each section and stick to it.
+- **Use the AICPA Blueprint** – Align your study with the CPA exam structure and topic weights.
+- **Track Progress** – Regularly assess weak areas and adjust study plans accordingly.
+- **Balance Multiple-Choice & Task-Based Simulations** – Allocate adequate time for both.
+
+### **5. Practice & Review**
+- **Use CPA Review Courses** – Becker, Wiley, Roger, and Gleim offer structured study materials.
+- **Take Full-Length Mock Exams** – Simulate real exam conditions to build stamina.
+- **Review Incorrect Answers** – Understand why an answer was wrong to prevent repeated mistakes.
+- **Join Study Groups or Forums** – Engage with peers to clarify doubts and gain new perspectives.
+
+### **6. Exam Day Strategy**
+- **Read Questions Carefully** – Avoid misinterpretation due to time pressure.
+- **Manage Time Effectively** – Don’t spend too long on one question; move on if stuck.
+- **Use the Authoritative Literature** – For task-based simulations, leverage the research tool.
+- **Stay Calm & Focused** – Practice breathing techniques to reduce stress.
+
+By implementing these strategies, candidates can maximize retention, enhance understanding, and increase their CPA exam score effectively.
+
 ## Internal Audit
 
 Three types of internal audit,

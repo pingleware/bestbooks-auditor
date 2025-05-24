@@ -511,6 +511,20 @@ def run_prolog_query(query):
 | Explainability         | Prolog     |
 | Versatility            | Combo      |
 
+| Feature                            | **Prolog + Ollama (Hybrid Reasoning)**             | **Ollama RAG (Retrieval-Augmented Generation)**       |
+| ---------------------------------- | -------------------------------------------------- | ----------------------------------------------------- |
+| **Formal Logic & Reasoning**       | ✅ Excellent — uses symbolic logic (rules, facts)   | 🚫 Weak — relies on semantic pattern matching         |
+| **Explainability**                 | ✅ Transparent reasoning path (traceable rules)     | 🚫 Often a "black box"; can’t explain how it inferred |
+| **Natural Language Understanding** | ✅ Handled well by Ollama                           | ✅ Handled well by Ollama                              |
+| **Answer Generation**              | ✅ Natural phrasing via Ollama                      | ✅ Fluent answers generated from retrieved context     |
+| **Knowledge Source**               | 🧠 Hardcoded facts & logic (Prolog knowledge base) | 📚 External documents, vector DB, web data            |
+| **Adaptability (New Knowledge)**   | 🚫 Manual update of Prolog DB                      | ✅ Dynamically retrievable documents                   |
+| **Data Scalability**               | ⚠️ Limited — Prolog struggles with large corpora   | ✅ Scales well with large knowledge bases              |
+| **Consistency & Precision**        | ✅ Rule-consistent and deterministic                | ⚠️ May hallucinate or merge facts loosely             |
+| **Inference Power**                | ✅ Deep reasoning over structured data              | ⚠️ Shallow — relies on surface-level semantics        |
+| **Latency**                        | ⚠️ Slower due to external Prolog calls             | ✅ Fast when using vector DB retrieval                 |
+| **Maintenance**                    | 🧠 Logic needs to be written and maintained        | ✅ Data-driven, easier to update via uploads           |
+
 
 ## Financial Statement Notes
 

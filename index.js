@@ -409,7 +409,11 @@ const {
 } = require('./soc/SocFramework.js');
 
 const {
-  RAG_SERVER_URL
+  OLLAMA_API,
+  MODEL,
+  GAAP_RULES,
+  auditFinancialReport,
+  formatFinancialReport,
 } = require('./ai/llamaAudit.js')
 
 const {
@@ -418,6 +422,12 @@ const {
 } = require('./formatAuditResults.js');
 
 const { sendAlertEmail } = require('./notificationService.js')
+
+const { 
+  generateSxCompliantAuditReport,
+  generateManagementAuditReport,
+  generatePublicDisclosureAuditReport,
+} = require('./reportService.js');
 
 module.exports = {
   invoke,
@@ -466,7 +476,11 @@ module.exports = {
   Soc1Framework,
   Soc2Framework,
   Soc3Framework,
-  RAG_SERVER_URL,
+  OLLAMA_API,
+  MODEL,
+  GAAP_RULES,
+  auditFinancialReport,
+  formatFinancialReport,
   train,
   query,
   performAuditChecks,
@@ -492,4 +506,7 @@ module.exports = {
   ToJSON,
   ToXML,
   sendAlertEmail,
+  generateSxCompliantAuditReport,
+  generateManagementAuditReport,
+  generatePublicDisclosureAuditReport,
 };

@@ -525,6 +525,7 @@ def run_prolog_query(query):
 | **Latency**                        | ⚠️ Slower due to external Prolog calls             | ✅ Fast when using vector DB retrieval                 |
 | **Maintenance**                    | 🧠 Logic needs to be written and maintained        | ✅ Data-driven, easier to update via uploads           |
 
+[Download Prolog](https://www.swi-prolog.org/Download.html)
 
 ## Financial Statement Notes
 

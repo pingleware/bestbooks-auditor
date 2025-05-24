@@ -1,10 +1,10 @@
 // services/reportService.js
 
-const { performAllChecks } = require('./gaapGaasCheckService');
+const { performAuditChecks } = require('./gaapCheckService.js');
 
 // Function to generate an S-X compliant financial audit report
 async function generateSxCompliantAuditReport(companyName, yearEnd, auditFirm, auditPartnerName) {
-  const checks = await performAllChecks();
+  const checks = await performAuditChecks();
   const reportDate = new Date().toISOString();
   
   let report = `
@@ -65,7 +65,7 @@ async function generateSxCompliantAuditReport(companyName, yearEnd, auditFirm, a
 
 // Function to generate a Management Audit Report
 async function generateManagementAuditReport(companyName, yearEnd, managerName, managerTitle) {
-    const checks = await performAllChecks();  // Perform the GAAP/GAAS checks
+    const checks = await performAuditChecks();  // Perform the GAAP/GAAS checks
     const reportDate = new Date().toISOString();
   
     let report = `
@@ -117,7 +117,7 @@ async function generateManagementAuditReport(companyName, yearEnd, managerName, 
 
 // Function to generate a Public Disclosure Audit Report
 async function generatePublicDisclosureAuditReport(companyName, yearEnd, auditFirm, auditPartnerName) {
-    const checks = await performAllChecks();  // Perform the GAAP/GAAS checks
+    const checks = await performAuditChecks();  // Perform the GAAP/GAAS checks
     const reportDate = new Date().toISOString();
   
     let report = `

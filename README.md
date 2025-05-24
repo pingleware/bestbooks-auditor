@@ -6,6 +6,21 @@ Using the R-language and examples from https://github.com/ameypophali/Auditing-f
 
 BestBooks Auditor will provide automatic financial audits with a notation added to the financial report using the noteToFinancialStatement component of bestbooks-reports.
 
+## Core Design
+1. Rules Engine (engine.js)
+   - Loads GAAP rules dynamically from /rules/
+   - Applies rules to financial statements or transactions
+   - Generates compliance reports
+2. Rules Modules (rules/topic_105.js, etc.)
+   - Individual modules for each FASB topic (e.g., Topic 105, Topic 606)
+   - Defines validation functions for financial statements
+3. Validator (validator.js)
+   - Centralized logic to validate transactions against GAAP rules
+   - Generates warnings, errors, or compliance reports
+4. Configuration (rules_config.json)
+   - Stores rule toggles (enable/disable specific GAAP topics)
+   - Allows customization for different company policies
+
 ## Introduction to R
 
 See https://cran.r-project.org/doc/manuals/r-release/R-intro.pdf
@@ -575,141 +590,27 @@ See [https://www.ffiec.gov/pdf/FFIEC_forms/CodificationReferences_201006.pdf](ht
 | ------------------ | ------------------------------------ | :-----: | :---: | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Prerequisites      |                                      |        |      |                                                                                                                                                                  |
 |                    | Principles of Financial Accounting   |    3    | 10.29 | https://www.thriftbooks.com/w/financial-and-managerial-accounting-information-for-decisions_john-j-wild/434234/#edition=13193064&idiq=34454027                   |
-|                    | Principles of Managerial Accounting  |    3    | 143.99 | https://www.amazon.com/Financial-Managerial-Accounting-Carl-Warren/dp/0357714040 |
+|                    | Principles of Managerial Accounting  |    3    |   -   | https://www.thriftbooks.com/w/financial-and-managerial-accounting-information-for-decisions_john-j-wild/434234/#edition=13193064&idiq=34454027                   |
 |                    | Computer Applications for Business   |    3    | 4.00 | https://www.abebooks.com/Computer-Applications-Business-R-Parameswaran-Chand/4513299831/bd                                                                       |
 |                    | Principles of Macroeconomics         |    3    | 6.39 | https://www.thriftbooks.com/w/principles-of-macroeconomics_n-gregory-mankiw/34604432/?resultid=91d5a1f1-ed05-48a6-8ed8-fa7e4652ac0f#edition=6513056&idiq=6149835 |
 |                    | Principles of Microeconomics         |    3    | 7.39 | https://www.thriftbooks.com/w/principles-of-microeconomics_robert-frank/367334/?resultid=4e06159a-4d34-427c-adfc-a59c1fa5b2f6#edition=13244269&idiq=32269544     |
-|                    | Calculus for Business                |    3    | 113.62 | https://www.thriftbooks.com/w/calculus-for-business_gregor-groner/52031719/?resultid=8b68eb3d-43ba-43af-9279-c3d69bf23208#edition=70755465&idiq=63103650 |
-|                    | Elementary Statistics-Business       |    3    |  7.39  | https://www.thriftbooks.com/w/elementary-business-statistics_john-e-freund_frank-j-williams/924141/?resultid=e62b1400-cbe0-455a-a191-33323c4a9c33#edition=2588179&idiq=7238533 |
-|                    | TOTAL                                |   21   | 293.07 |                                                                                                                                                                  |
+|                    | Calculus for Business                |    3    |      |                                                                                                                                                                  |
+|                    | Elementary Statistics-Business       |    3    |      |                                                                                                                                                                  |
+|                    | TOTAL                                |   21   |      |                                                                                                                                                                  |
 | Core Requirements |                                      |        |      |                                                                                                                                                                  |
-|                    | Legal Environment of Business        |    3    | 6.19 | https://www.thriftbooks.com/w/the-legal-environment-of-business-text-and-cases_roger-leroy-miller_frank-b-cross/9605035/?resultid=479cce11-620d-4c9e-9b6f-faf49fcc152a#edition=8409432&idiq=7526261 |
-|                    | Financial Management                 |    3    | 375.95 | https://www.thriftbooks.com/w/financial-management-theory-and-practice-harcourt-college-publishers-series-in-finance_eugene-f-brigham_michael-c-ehrhardt/256169/?resultid=64ff6c61-0607-4d3e-bbfa-1bf85623865e#edition=65544659&idiq=54423685 |
-|                    | Principles of Management             |    3    |  5.89 | https://www.thriftbooks.com/w/principles-of-management_charles-wl-hill_steven-lattimore-mcshane/3275908/?resultid=10da56a2-2f6b-47ee-abc0-69e0ce0cf358#edition=3312173&idiq=12937779 |
-|                    | Principles of Marketing              |    3    |  9.29 | https://www.thriftbooks.com/w/principles-of-marketing_philip-kotler_gary-armstrong/257758/?resultid=a079b2b3-a7b4-463f-89d0-ffcc88eb88fa#edition=6425732&idiq=4260000 |
-|                    | Operations Management                |    3    |  24.24 | https://www.thriftbooks.com/w/operations-management-for-dummies_edward-anderson_geoffrey-parker/20700558/?resultid=55a8b520-c08a-4f67-a5d0-26a4d011bf0c#edition=59416998&idiq=46022255 |
-|                    | Strategic Management Business Policy |    3    |  9.99 | https://www.thriftbooks.com/w/strategic-management-and-business-policy-10th-edition_thomas-l-wheelen_j-david-hunger/271620/?resultid=1f561ed9-cd35-45d0-817b-31e200496efe#edition=8429609&idiq=6625699 |
-|                    | TOTAL                                |   18   | 431.55 |  |
-| Major Requirements |   |        |      |      |
-| Upper-Division Accounting Courses | |        |      |      |
-| | Intermediate Accounting I | 3 | | |
-| | Intermediate Accounting II | 3 | | |
-| | Advanced Accounting | 3 | | |
-| | Auditing | 3 | | |
-| | Cost Accounting | 3 | | |
-| | Financial Accounting (based on USA standards) | 3 | | |
-| | Taxation (based on USA standards) | 3 | | |
-| | Accounting Information Systems | 3 | | |
-| | TOTAL | 24 | | |
-| Upper-Division General Business Courses | |        |      |      |
-| | Business Law (based on USA Law) | 3 | | |
-| | Business Ethics | 3 | | |
-| | Organizational Behavior | 3 | | |
-| | International Business | 3 | | |
-| | Entrepreneurship | 3 | | |
-| | Business Communications | 3 | | |
-| | Economic Analysis for Business | 3 | | |
-| | Capstone Business Strategy | 3 | | |
-| | TOTAL | 24 | | |
-
-TOTAL 87 credits equals 1,305 classroom hours for semester system or 870 classroom hours for quarter system.
-
-To convert credit hours to class hours, you can use the following general guidelines:
-
-    1 credit hour = 15 contact hours (for a semester system)
-    1 credit hour = 10 contact hours (for a quarter system)
-
-Here’s a general breakdown of the **Semester** and **Quarter** system calendars for classes:  
-
----
-
-### **Semester System (Typical 15-16 weeks)**
-- **Fall Semester** (Mid-August to Mid-December)  
-- **Spring Semester** (Mid-January to Early-May)  
-- **Optional Summer Session** (May to August, 6-12 weeks)
-
-| **Term**      | **Start Date** | **End Date** | **Weeks** |
-|--------------|-------------|-----------|---------|
-| Fall Semester | Mid-August  | Mid-December  | 15-16 |
-| Spring Semester | Mid-January  | Early-May  | 15-16 |
-| Summer Session | May | August | 6-12 |
-
----
-
-### **Quarter System (Typical 10-11 weeks)**
-- **Fall Quarter** (Late September to Early December)  
-- **Winter Quarter** (Early January to Mid-March)  
-- **Spring Quarter** (Late March to Early June)  
-- **Optional Summer Quarter** (June to August, 8-10 weeks)
-
-| **Term**      | **Start Date** | **End Date** | **Weeks** |
-|--------------|-------------|-----------|---------|
-| Fall Quarter | Late September | Early December | 10-11 |
-| Winter Quarter | Early January | Mid-March | 10-11 |
-| Spring Quarter | Late March | Early June | 10-11 |
-| Summer Quarter | June | August | 8-10 |
-
-Here is the **Semester and Quarter Calendar** for the **2025-2026** academic year:  
-
----
-
-### **Semester System (2025-2026)**
-| **Term**      | **Start Date** | **End Date** | **Weeks** |
-|--------------|-------------|-----------|---------|
-| Fall 2025 | Monday, August 18, 2025 | Friday, December 12, 2025 | 16 |
-| Spring 2026 | Monday, January 13, 2026 | Friday, May 8, 2026 | 16 |
-| Summer 2026 | Monday, May 19, 2026 | Friday, August 8, 2026 | 6-12 |
-
----
-
-### **Quarter System (2025-2026)**
-| **Term**      | **Start Date** | **End Date** | **Weeks** |
-|--------------|-------------|-----------|---------|
-| Fall 2025 | Monday, September 22, 2025 | Friday, December 5, 2025 | 10 |
-| Winter 2026 | Monday, January 6, 2026 | Friday, March 13, 2026 | 10 |
-| Spring 2026 | Monday, March 30, 2026 | Friday, June 12, 2026 | 10 |
-| Summer 2026 | Monday, June 22, 2026 | Friday, August 28, 2026 | 8-10 |
-
-### Preparing for the CPA Exam
-Preparing for the CPA exam requires a strategic and disciplined approach. Here are key techniques to maximize your score:
-
-### **1. Thought Process & Critical Thinking**
-- **Understand Concepts Deeply** – Avoid rote memorization; focus on understanding why a rule or principle exists.
-- **Practice Application** – Work on practice questions to develop the ability to apply concepts in different scenarios.
-- **Use the “Why?” Method** – Continuously ask why something is correct or incorrect to reinforce deeper learning.
-- **Simulate Exam Conditions** – Practice with time constraints to enhance problem-solving speed and efficiency.
-
-### **2. Effective Note-Taking**
-- **Summarization** – Write down key takeaways in your own words to reinforce understanding.
-- **Visual Aids** – Use mind maps, charts, and tables to organize complex topics.
-- **Mnemonics & Acronyms** – Develop memory aids (e.g., **P**rovide for liabilities, **E**stimate the cost, **R**ecord the transaction).
-- **Flashcards** – Create digital or physical flashcards for quick review of essential terms and formulas.
-
-### **3. Analytical Approach**
-- **Break Down Problems** – Identify relevant details and eliminate unnecessary information.
-- **Compare Answer Choices** – When unsure, compare options logically rather than guessing blindly.
-- **Use Process of Elimination** – Identify incorrect answers quickly to narrow down choices.
-- **Prioritize High-Scoring Areas** – Focus on topics with greater weight in the exam blueprint.
-
-### **4. Organization & Time Management**
-- **Create a Study Schedule** – Allocate time for each section and stick to it.
-- **Use the AICPA Blueprint** – Align your study with the CPA exam structure and topic weights.
-- **Track Progress** – Regularly assess weak areas and adjust study plans accordingly.
-- **Balance Multiple-Choice & Task-Based Simulations** – Allocate adequate time for both.
-
-### **5. Practice & Review**
-- **Use CPA Review Courses** – Becker, Wiley, Roger, and Gleim offer structured study materials.
-- **Take Full-Length Mock Exams** – Simulate real exam conditions to build stamina.
-- **Review Incorrect Answers** – Understand why an answer was wrong to prevent repeated mistakes.
-- **Join Study Groups or Forums** – Engage with peers to clarify doubts and gain new perspectives.
-
-### **6. Exam Day Strategy**
-- **Read Questions Carefully** – Avoid misinterpretation due to time pressure.
-- **Manage Time Effectively** – Don’t spend too long on one question; move on if stuck.
-- **Use the Authoritative Literature** – For task-based simulations, leverage the research tool.
-- **Stay Calm & Focused** – Practice breathing techniques to reduce stress.
-
-By implementing these strategies, candidates can maximize retention, enhance understanding, and increase their CPA exam score effectively.
+|                    | Legal Environment of Business        |    3    |      |                                                                                                                                                                  |
+|                    | Financial Management                 |    3    |      |                                                                                                                                                                  |
+|                    | Principles of Management             |    3    |      |                                                                                                                                                                  |
+|                    | Principles of Marketing              |    3    |      |                                                                                                                                                                  |
+|                    | Operations Management                |    3    |      |                                                                                                                                                                  |
+|                    | Strategic Management Business Policy |    3    |      |                                                                                                                                                                  |
+|                    | TOTAL                                |   18   |      |                                                                                                                                                                  |
+| Major Requirements |                                      |        |      |                                                                                                                                                                  |
+|                    |                                      |        |      |                                                                                                                                                                  |
+|                    |                                      |        |      |                                                                                                                                                                  |
+|                    |                                      |        |      |                                                                                                                                                                  |
+|                    |                                      |        |      |                                                                                                                                                                  |
+|                    |                                      |        |      |                                                                                                                                                                  |
 
 ## Internal Audit
 
